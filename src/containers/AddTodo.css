@@ -1,0 +1,11 @@
+.AddTodo form {
+  display: flex;
+}
+
+.AddTodo .TodoText {
+  flex-grow: 2;
+}
+
+.AddTodo .TodoButton {
+  flex-grow: 1;
+}
