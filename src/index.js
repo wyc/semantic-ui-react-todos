@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import App from './App'
 import reducer from './reducers'
 import './index.css'
-import '../semantic/dist/semantic.min.css';
+import './semantic/dist/semantic.min.css';
 
 const store = createStore(reducer)
 
