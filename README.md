@@ -17,6 +17,27 @@ The server should be live at <http://localhost:3000>.
 
 ## How to get from react-redux todos example to this project
 
+### Requirements
+When trying to build Semantic-UI,  I've only had success with `npm@6`,
+`node@8`, and `gulp@3` due to version incompatibilities of [Semantic-UI with
+gulp@4](https://github.com/Semantic-Org/Semantic-UI/issues/6705) and []().
+Hopefully these will get fixed upstream, but until then you may have to revert
+versions to work with Semantic-UI at all. Here's my working setup:
+
+```
+$ node --version
+v8.16.0
+$ npm --version
+6.4.1
+$ gulp --version
+[12:29:54] CLI version 3.9.1
+[12:29:54] Local version 3.9.1
+```
+
+The `gulp` version is specified in the `package.json`, but you may need to
+setup `npm` and `node` for your system.
+
+
 ### Install `semantic-ui` and `semantic-ui-react`
 
 ```bash
@@ -29,7 +50,7 @@ Follow the prompts for the `semantic-ui` package, choosing the most customizable
 
 Semantic UI uses the tool `gulp` to build. If you do not have it, you may want to [install it globally](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md). The following build steps must be done after every change to themes or other modifications to `semantic` itself.
 ```bash
-$ (cd semantic && gulp build)
+$ (cd src/semantic && gulp build)
 ```
 
 We must now link the newly generated CSS file as a dependency into `src/index.js` so that [Webpack](https://webpack.github.io/) knows to bundle it:
