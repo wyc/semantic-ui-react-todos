@@ -20,7 +20,7 @@ The server should be live at <http://localhost:3000>.
 ### Requirements
 When trying to build Semantic-UI,  I've only had success with `npm@6`,
 `node@8`, and `gulp@3` due to version incompatibilities of [Semantic-UI with
-gulp@4](https://github.com/Semantic-Org/Semantic-UI/issues/6705) and []().
+`gulp@4`](https://github.com/Semantic-Org/Semantic-UI/issues/6705) and [`>node@8` with `gulp@3`](https://github.com/nodejs/node/issues/19786).
 Hopefully these will get fixed upstream, but until then you may have to revert
 versions to work with Semantic-UI at all. Here's my working setup:
 
